@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Nunito_wght__1') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://static.figma.com/font/PlusJakartaSans_wght__2') format('woff2');
+}
+
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Oswald', 'Arial Narrow', sans-serif;
+
+  --color-brand-green: #1C4A2E;
+  --color-brand-green-mid: #2D6A4F;
+  --color-brand-green-light: #52B788;
+  --color-brand-ash: #F4F3EE;
+  --color-brand-ash-dark: #E8E6DE;
+  --color-brand-orange: #E8650A;
+  --color-brand-orange-light: #F49349;
+}
+
+@keyframes cartSlide {
+  0%   { transform: translateX(-180px); opacity: 0; }
+  6%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { transform: translateX(calc(100vw + 180px)); opacity: 0; }
+}
+
+@keyframes wheelSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes itemFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-7px); }
+}
+
+@keyframes cartBounce {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-3px); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dashScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100px); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.4); }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+*:hover {
+  scrollbar-color: rgba(0,0,0,0.15) transparent;
+}
+
+/* Marketplace copy is intentionally roomier for easier browsing and ordering. */
+.marketplace-page .text-xs {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+}
+
+.marketplace-page .text-sm {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+}

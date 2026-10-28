@@ -1,0 +1,10 @@
+{
+  "description": "Connect with global vendors to buy groceries and food items in bulk or small quantities, featuring delivery options and customer support.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
